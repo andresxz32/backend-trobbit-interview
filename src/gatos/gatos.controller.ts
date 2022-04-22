@@ -38,7 +38,7 @@ export class GatosController {
   //en la URL usando la información enviada en el body
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateGatoDto: UpdateGatoDto) {
-    return this.gatosService.findOneAndUpdate({ _id: id }, updateGatoDto);
+    return this.gatosService.update({ _id: id }, updateGatoDto);
   }
 
   //Debe permitir eliminar el gato con el id enviado
